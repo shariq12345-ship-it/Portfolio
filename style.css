@@ -1,0 +1,885 @@
+* {
+    color: white;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Geneva, Verdana, sans-serif;
+    background-color: black;
+    transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+    box-shadow: 0px 1px 0px gray;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin: 0px 20px;
+}
+
+a:hover {
+    color: red;
+
+}
+
+.text span {
+    font-size: 20px;
+}
+
+.text span1 {
+    color: red;
+}
+
+p span {
+    color: red;
+}
+
+.home {
+    display: flex;
+    padding: 150px 100px;
+    gap: 30px;
+}
+
+.text {
+    margin-top: 70px;
+}
+
+.text p {
+    margin: 10px 0px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.text h1 {
+    font-size: 40px;
+}
+
+.icon i {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.icon i:hover {
+    color: red;
+}
+
+
+/* ------------------About--------------- */
+#About {
+    padding: 130px 0px;
+}
+
+.cont p {
+
+    font-size: 13px;
+
+}
+
+.cont h3 {
+    padding-left: 5%;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex-basis: 35%;
+    padding-left: 8%;
+
+}
+
+.col-1 img {
+    width: 100%;
+    border-radius: 20px
+}
+
+.col-2 {
+    flex-basis: 60%;
+    padding-right: 10%;
+    padding-top: 33px;
+}
+
+.col-2 p {
+    letter-spacing: 2px;
+    padding-top: 10px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 5px;
+    font-size: -20px;
+}
+
+.col-2 h1 {
+    padding-left: 5px;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 20px;
+    padding-top: 30px;
+
+}
+
+.cont h5 {
+    padding-top: 25px;
+    color: red;
+}
+
+.education p {
+    padding-top: 23px;
+    line-height: 20px;
+}
+
+/* -------------------Services-------------- */
+#Services {
+    align-items: center;
+    justify-items: center;
+    padding: 120px 0px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    grid-gap: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 360px;
+    width: 280px;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.card img {
+    height: 250px;
+    width: 280px;
+}
+
+.services-list h3 {
+    padding: 5px 10px;
+}
+
+.services-list p {
+    font-size: 12px;
+    padding: 0px 10px 10px 10px;
+    line-height: 16px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 3px white;
+}
+
+/* -------------------Work------------------ */
+#Work {
+    padding-top: 150px;
+    width: 100%;
+}
+
+.port {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.port p {
+    font-size: 15px;
+    padding: 10px;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+#Work h1 {
+    justify-self: center;
+}
+
+.card-1 {
+    height: 350px;
+    width: 280px;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.card-1 img {
+    height: 250px;
+    width: 280px;
+}
+
+
+
+.card-1 a {
+    background-color: rgb(87, 0, 0);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.card-1 a:hover {
+    color: white;
+    background-color: rgb(114, 1, 1)
+}
+
+.card-1:hover {
+    box-shadow: 0px 0px 3px white;
+}
+
+
+/* -----------------contact me------------------- */
+#contact {
+    padding: 130px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-left {
+    flex-basis: 35%;
+    width: 100%;
+}
+
+.con-img {
+    margin-left: 10%;
+    height: 100%;
+    width: 90%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+    margin: 0px 30px;
+
+}
+
+.contact-right h1 {
+    padding-left: 30%;
+}
+
+.contact-right {
+    width: 40%;
+}
+
+form input,
+form textarea {
+    width: 90%;
+    border: 0;
+    outline: none;
+    background-color: #313030;
+    color: white;
+    margin: 20px 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+}
+
+.gmail {
+    display: flex;
+    font-size: 12px;
+    justify-content: flex-end;
+    margin: 10px 100px;
+}
+
+.g-right {
+    padding: 0px 50px;
+}
+
+.gmail p i {
+    padding: 5px 25px;
+    font-size: 15px;
+    color: rgba(255, 0, 0, 0.342);
+}
+
+.btn {
+    width: 300px;
+    margin-right: 20%;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    background-color: rgba(255, 0, 0, 0.342);
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.btn:hover {
+    background-color: rgba(255, 0, 0, 0.514);
+
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #313030;
+    margin-top: 50px;
+}
+
+/* --------------------footer--------------------- */
+.footer {
+    margin: 100px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 120px;
+    justify-content: center;
+    justify-items: center;
+}
+.footer-left{
+    justify-items: center;
+}
+
+.footer-left h2 {
+    margin-bottom: 50px;
+}
+
+.footer-left p {
+    margin-bottom: 20px;
+}
+
+.footer-center h2 {
+    margin-bottom: 50px;
+}
+
+.footer-center ul {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    list-style: none;
+
+}
+
+.footer-center ul li {
+    margin: 10px 0px;
+}
+
+.footer-center ul li a {
+    text-decoration: none;
+
+}
+
+.footer-right h2 {
+    margin-bottom: 50px;
+}
+
+.footer-right i {
+    padding: 0px 11px;
+    font-size: 20px;
+}
+
+.footer-right a i:hover {
+    color: red;
+}
+
+.copyright {
+    width: 100%;
+    height: 50px;
+    justify-items: center;
+    align-content: center;
+    background-color: #1d1d1d;
+}
+
+.copyright p {
+    background-color: transparent;
+}
+
+
+/* ------------------media qure--------------- */
+
+nav .fa-xmark,
+nav .fa-bars {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width:670px) {
+
+    nav .fa-xmark,
+    nav .fa-bars {
+        display: block;
+    }
+
+    nav .fa-xmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px;
+        background-color: transparent;
+    }
+
+    nav {
+        gap: 90px;
+    }
+
+    nav ul {
+        background-color: rgb(34, 34, 34);
+        top: -400px;
+        position: fixed;
+        width: 300px;
+        height: 400px;
+        color: white;
+        justify-items: center;
+        align-content: center;
+        margin-right: 20px;
+        border-radius: 20px;
+
+
+    }
+
+    nav ul li {
+        display: block;
+        background-color: transparent;
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        background-color: transparent;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .home {
+        padding: 80px 0px;
+        margin-left: 20px;
+    }
+
+    .text h1 span {
+        font-size: 15px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .designlogo img {
+        display: none;
+    }
+
+    .icon i {
+        font-size: 20px;
+    }
+
+    #About {
+        margin-top: 100px;
+    }
+
+    .col-1 {
+        flex-basis: 100%;
+        margin: 0px 20px;
+        padding: 0px;
+    }
+
+    .col-2 {
+        padding: 0px;
+        margin: 0px 20px;
+    }
+
+    .col-2 h1 {
+        margin-top: 30px;
+    }
+
+    .col-2 p {
+        font-size: 15px;
+    }
+
+    .cont {
+        grid-template-columns: auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .cont h3 {
+        margin-top: 20px;
+    }
+
+    #Services {
+        margin: 0px 50px;
+    }
+
+    #contact {
+        flex-direction: column;
+
+    }
+
+    .contact-left {
+        flex-basis: 100%;
+    }
+
+    .contact-left img {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .contact-right {
+        flex-basis: 100%;
+
+    }
+
+    .contact-right {
+        width: 100%;
+        margin: 10px 15px;
+    }
+
+    .contact-right h1 {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .gmail {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .gmail p {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .g-right {
+        padding: 0px
+    }
+
+    .footer {
+        grid-template-columns: auto;
+        margin: 50px 0px;
+    }
+
+    .copyright p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:768px) {
+
+    nav .fa-xmark,
+    nav .fa-bars {
+        display: block;
+    }
+
+    nav .fa-xmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px;
+        background-color: transparent;
+    }
+
+    nav {
+        gap: 90px;
+    }
+
+    nav ul {
+        background-color: rgb(34, 34, 34);
+        top: -400px;
+        position: fixed;
+        width: 300px;
+        height: 400px;
+        color: white;
+        justify-items: center;
+        align-content: center;
+        margin-right: 20px;
+        border-radius: 20px;
+
+
+    }
+
+    nav ul li {
+        display: block;
+        background-color: transparent;
+        margin: 20px 0px;
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        background-color: transparent;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .home {
+        padding: 80px 0px;
+        margin-left: 20px;
+    }
+
+    .text h1 span {
+        font-size: 15px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .designlogo img {
+        display: none;
+    }
+
+    .icon i {
+        font-size: 20px;
+    }
+
+    #About {
+        margin-top: 100px;
+    }
+
+    .col-2 {
+        margin: 0px 20px;
+    }
+
+    .col-2 h1 {
+        margin-top: 30px;
+    }
+
+    .col-2 p {
+        font-size: 15px;
+    }
+
+    .cont h3 {
+        margin-top: 20px;
+    }
+
+    #Services {
+        margin: 0px 50px;
+    }
+
+    .contact-right {
+        width: 100%;
+        margin: 10px 15px;
+    }
+
+    .contact-right h1 {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .gmail {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .gmail p {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .g-right {
+        padding: 0px
+    }
+
+    .footer {
+        grid-template-columns: auto;
+        margin: 50px 0px;
+    }
+
+    .footer h2 {
+        margin-top: 30px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:1100px) {
+
+    .home {
+        padding: 150px 0px;
+        margin: 0px 30px;
+        gap: 0px;
+    }
+
+    .designlogo img {
+        max-height: 500px;
+        max-width: 300px;
+        padding: 50px 0px;
+    }
+
+    .icon i {
+        font-size: 20px;
+    }
+
+    #About {
+        margin-top: 100px;
+    }
+
+    .col-1 {
+        flex-basis: 30%;
+        margin: 0px 20px;
+        padding: 0px;
+    }
+
+    .col-2 {
+        padding: 0px;
+        margin: 0px 20px;
+    }
+
+    .col-2 h1 {
+        margin-top: 10px;
+    }
+
+    .cont {
+        padding: 0px;
+    }
+
+    .cont h3 {
+        margin-top: 20px;
+    }
+
+    #Services {
+        margin: 0px 50px;
+    }
+
+    .contact-right {
+        width: 100%;
+        margin: 10px 15px;
+    }
+
+    .contact-right h1 {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .gmail {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .gmail p {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .g-right {
+        padding: 0px
+    }
+
+    .footer {
+        gap: 0px;
+        margin: 50px 0px;
+    }
+
+    .copyright {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .icon i {
+        font-size: 20px;
+    }
+
+    #About {
+        margin-top: 100px;
+    }
+
+    .col-1 {
+        flex-basis: 30%;
+        margin: 0px 20px;
+        padding: 0px;
+    }
+
+    .col-2 {
+        padding: 0px;
+        margin: 0px 20px;
+    }
+
+    .col-2 h1 {
+        margin-top: 10px;
+    }
+
+    .cont {
+        padding: 0px;
+    }
+
+    .cont h3 {
+        margin-top: 20px;
+    }
+
+    #Services {
+        margin: 0px 50px;
+    }
+
+    .contact-right {
+        width: 100%;
+        margin: 10px 15px;
+    }
+
+    .contact-right h1 {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .gmail {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .gmail p {
+        padding: 0px;
+        padding-top: 10px;
+    }
+
+    .g-right {
+        padding: 0px
+    }
+
+    .footer {
+        gap: 0px;
+        margin: 50px 0px;
+    }
+
+    .copyright {
+        font-size: 15px;
+    }
+}
