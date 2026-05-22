@@ -88,6 +88,19 @@ p span {
     color: red;
 }
 
+.cvd {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.cv {
+    text-decoration: none;
+    background-color: transparent;
+}
+
 
 /* ------------------About--------------- */
 #About {
@@ -353,7 +366,8 @@ form textarea {
     justify-content: center;
     justify-items: center;
 }
-.footer-left{
+
+.footer-left {
     justify-items: center;
 }
 
@@ -489,6 +503,10 @@ nav .fa-bars {
     .icon i {
         font-size: 20px;
     }
+    .cvd{
+        font-size: 13px;
+  
+    }
 
     #About {
         margin-top: 100px;
@@ -581,7 +599,7 @@ nav .fa-bars {
         margin: 50px 0px;
     }
 
-    .copyright p{
+    .copyright p {
         font-size: 12px;
     }
 }
