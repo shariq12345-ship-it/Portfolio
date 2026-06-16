@@ -18,7 +18,7 @@
                 <p>Portfolio</p>
             </div>
             <ul id="sidemenu">
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Services">Services</a></li>
@@ -29,28 +29,34 @@
         </nav>
         <div class="home">
             <div class="text">
-                <h1><span>Hi, My Name is <span>Shariq</span> and<br></span>  I'm <span1>W</span1>eb
-                    <span1>D</span1>eveloper
+                <h1><span>Hi, My Name is <span>Shariq</span> and<br></span> I'm <span1 class="auto-type"></span1>
                 </h1>
                 <p>A web developer builds and maintains websites and web applications. They work with technologies like
                     HTML, CSS, JavaScript, and backend languages to create responsive, functional, and user-friendly
                     digital
                     experiences.</p>
-                    <div class="cvd">
+                <div class="cvd">
                     <a href="./content/bb3012a1-902a-4414-89b7-f4e0ecf0060e.jpg" class="cv">Checkout My Cv</a>
-                    </div>
+                </div>
                 <div class="icon">
                     <a href="https://github.com/shariq12345-ship-it"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://youtube.com/@shahhd123?si=3q50DD4z1n5m6uI_"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com/@shahhd123?si=3q50DD4z1n5m6uI_"><i
+                            class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="designlogo">
                 <img src="./content/devlopment.png">
             </div>
         </div>
+        <!-- ---------------------logo ----------- -->
 
+        <div class="splash">
+            <h1 class="entry">Portfilio.</h1>
+        </div>
     </header>
+
     <!-- ------------------about------------- -->
     <div id="About">
         <div class="row">
@@ -59,14 +65,14 @@
             </div>
             <div class="col-2">
                 <h1>About me</h1>
-                <p>Hi, My name is Syed shariq raza zaidi and I am
-                    in class 11th in humanities group and I am National collage student and I live in karachi Pakistan
-                    and I am learning Web development course in "Aptech Learning" garden center. </p>
+                <p>Hi, my name is Syed Shariq Raza Zaidi. I have passed Matriculation exam with science group. Now, I am
+                    student of intermediate. I live in Karachi, Pakistan. I am learning Web development skill from
+                    “Aptech Leaning garden center” </p>
                 <div class="cont">
                     <div class="skills">
                         <h3>Skills</h3>
                         <h5>Microsoft Office </h5>
-                        <p>Excel, Word and Powerpoint.</p>
+                        <p>MS Excel, Word and Powerpoint.</p>
                         <h5>Graphics Design </h5>
                         <p>Photoshop, illustrator and Canva.</p>
                         <h5>Web Development</h5>
@@ -105,8 +111,8 @@
                 <img
                     src="./content/developer-working-from-home-man-sitting-chair-coding-laptop-vector-illustration_533410-694.avif">
                 <h3>Backend</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, harum repellendus delectus deleniti
-                    minima consequatur.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, harum repellendus delectus deleniti.
+                    ( Not learn yet )</p>
             </div>
             <div class="card">
                 <img src="./content/creative-professional-working-desk-modern-home-office_1304147-94285.jpg">
@@ -132,7 +138,7 @@
             </div>
             <div class="card-1">
                 <img src="./content/futuristic-space-logo-design-with-a-digital-planet-and-orbiting-rings.webp">
-                <p>We create Frontend Website fully responsive.</p>
+                <p>We create Frontend Website fully responsive. ( Soon. )</p>
                 <a href="https://shariq12345-ship-it.github.io/Dental-care/">View Website</a>
             </div>
         </div>
@@ -185,7 +191,8 @@
         <div class="footer-right">
             <h2>Follow Us</h2>
             <a href="https://www.facebook.com/share/1Fh8CGhiVF/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i
+                    class="fa-brands fa-instagram"></i></a>
             <a href="https://youtube.com/@shahhd123?si=3q50DD4z1n5m6uI_"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://github.com/shariq12345-ship-it"><i class="fa-brands fa-github"></i></a>
         </div>
@@ -195,19 +202,38 @@
         <p>copyright &copy; 2026; Designed by SHARIQ</p>
     </div>
 
-<script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Web Developer", "Web Designer", "Video Editor"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+
+    <script>
 
 
-    var menu = document.getElementById("sidemenu");
+        var menu = document.getElementById("sidemenu");
 
-    function openmenu(){
-        sidemenu.style.top = "0"
-    }
-        function closemenu(){
-        sidemenu.style.top = "-400px"
-    }
+        function openmenu() {
+            sidemenu.style.top = "0"
+        }
+        function closemenu() {
+            sidemenu.style.top = "-400px"
+        }
 
-</script>
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(() => {
+                document.querySelector(".splash").style.display = "none";
+            }, 3000);
+        });
+    </script>
 
 </body>
 
