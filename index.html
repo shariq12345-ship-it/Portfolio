@@ -2,239 +2,422 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shariq's Portfolio</title>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+    <!-- Google Fonts mein Cursive Font add karen (Head Tag ke andar) -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header id="header">
-        <nav>
-            <div class="logo">
-                <p>Portfolio</p>
-            </div>
-            <ul id="sidemenu">
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="home">
-            <div class="text">
-                <h1><span>Hi, My Name is <span>Shariq</span> and<br></span> I'm <span1 class="auto-type"></span1>
-                </h1>
-                <p>A web developer builds and maintains websites and web applications. They work with technologies like
-                    HTML, CSS, JavaScript, and backend languages to create responsive, functional, and user-friendly
-                    digital
-                    experiences.</p>
-                <div class="cvd">
-                    <a href="./content/bb3012a1-902a-4414-89b7-f4e0ecf0060e.jpg" class="cv">Checkout My Cv</a>
-                </div>
-                <div class="icon">
-                    <a href="https://github.com/shariq12345-ship-it"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://youtube.com/@shahhd123?si=3q50DD4z1n5m6uI_"><i
-                            class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="designlogo">
-                <img src="./content/devlopment.png">
-            </div>
-        </div>
-        <!-- ---------------------logo ----------- -->
 
-        <div class="splash">
-            <h1 class="entry">Portfilio.</h1>
-        </div>
-    </header>
+<!-- Intro Splash Overlay -->
+<div id="splash-screen">
+  <div class="splash-content">
+    <h1 class="joining-text">Welcome to <span class="shariq-name">Shariq's</span> Portfolio</h1>
+  </div>
+</div>
 
-    <!-- ------------------about------------- -->
-    <div id="About">
-        <div class="row">
-            <div class="col-1">
-                <img src="./content/6a68799a-9552-4442-8c30-091463e91e96.jpg" class="imge">
-            </div>
-            <div class="col-2">
-                <h1>About me</h1>
-                <p>Hi, my name is Syed Shariq Raza Zaidi. I have passed Matriculation exam with science group. Now, I am
-                    student of intermediate. I live in Karachi, Pakistan. I am learning Web development skill from
-                    “Aptech Leaning garden center” </p>
-                <div class="cont">
-                    <div class="skills">
-                        <h3>Skills</h3>
-                        <h5>Microsoft Office </h5>
-                        <p>MS Excel, Word and Powerpoint.</p>
-                        <h5>Graphics Design </h5>
-                        <p>Photoshop, illustrator and Canva.</p>
-                        <h5>Web Development</h5>
-                        <p>Html, css, javascript, bootstrap and etc.</p>
-                    </div>
-                    <div class="experience">
-                        <h3>Experience</h3>
-                        <h5>Microsoft Office </h5>
-                        <p>2 month from "Noor Collages"</p>
-                        <h5>Graphics Design </h5>
-                        <p>3 month from "Noor Collages"</p>
-                        <h5>Web Development</h5>
-                        <p>6 month from "Aptech Learning"</p>
-                    </div>
-                    <div class="education">
-                        <h3>Education</h3>
-                        <p>I completed class 10th in computer science group from <i>"Mama baby care school"</i> and now
-                            I am in class 11th in humanities group and I am <i>"National collage" </i>student.</p>
+  <!-- Glassmorphism Navbar -->
+  <nav class="navbar">
+    <div class="logo">Portfolio<span>.</span></div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ------------------------Services----------------- -->
-    <div id="Services">
-        <h1>My Services</h1>
-        <div class="services-list">
-            <div class="card">
-                <img src="./content/programming-concept-illustration_114360-1213.avif">
-                <h3>Frontend</h3>
-                <p>I build modern, responsive frontend experiences that focus on clarity, performance, and user
-                    engagement.</p>
-            </div>
-            <div class="card">
-                <img
-                    src="./content/developer-working-from-home-man-sitting-chair-coding-laptop-vector-illustration_533410-694.avif">
-                <h3>Backend</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, harum repellendus delectus deleniti.
-                    ( Not learn yet )</p>
-            </div>
-            <div class="card">
-                <img src="./content/creative-professional-working-desk-modern-home-office_1304147-94285.jpg">
-                <h3>Ms office</h3>
-                <p>Creating well-structured documents in Word to building
-                    advanced spreadsheets in Excel and impactful presentations in PowerPoint.</p>
-            </div>
-        </div>
-    </div>
-    <!-- -----------------Work------------------ -->
-    <div id="Work">
-        <h1>My Work</h1>
-        <div class="port">
-            <div class="card-1">
-                <img src="./content/kreatikar-web-design-3411373_1920.jpg">
-                <p>I create "Dental Care" Frontend Website fully responsive.</p>
-                <a href="https://shariq12345-ship-it.github.io/Dental-care/">View Website</a>
-            </div>
-            <div class="card-1">
-                <img src="./content/images.jpg">
-                <p>I create "Calculator" using Html css and javascript</p>
-                <a href="https://shariq12345-ship-it.github.io/Calculator/">View Calculator</a>
-            </div>
-            <div class="card-1">
-                <img src="./content/futuristic-space-logo-design-with-a-digital-planet-and-orbiting-rings.webp">
-                <p>We create Frontend Website fully responsive. ( Soon. )</p>
-                <a href="https://shariq12345-ship-it.github.io/Dental-care/">View Website</a>
-            </div>
-        </div>
-    </div>
-    <!-- ------------------contact me----------------- -->
-    <div id="contact">
-        <div class="contact-left">
-            <img src="./content/5849073.png" class="con-img">
-        </div>
-        <div class="contact-right">
-            <h1>Contact Me</h1>
-            <form>
-                <input type="text" name="name" placeholder="Your name" required>
-                <input type="email" name="email" placeholder="Your email" required>
-                <textarea name="text" rows="6" placeholder="Your message"></textarea>
-            </form>
-            <div class="gmail">
-                <button class="btn">Submit</button>
-                <div class="g-left">
-                    <p><i class="fa-solid fa-envelope"></i>shariqraza401@gmail.com</p>
-                </div>
-                <div class="g-right">
-                    <p><i class="fa-solid fa-phone"></i>03323189130</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="line"></div>
-    <!-- ---------------footer--------------- -->
-    <div class="footer">
-        <div class="footer-left">
-            <h2>Contact Us</h2>
-            <p><span>Email:</span></p>
-            <p>shariqraza401@gmail.com</p>
-            <p>
-            <p><span>Number:</span></p>
-            </p>
-            <p>03323189130</p>
-        </div>
-        <div class="footer-center">
-            <h2>Quick links</h2>
-            <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Services">Services</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-right">
-            <h2>Follow Us</h2>
-            <a href="https://www.facebook.com/share/1Fh8CGhiVF/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/shah_hd_?igsh=MTVobDdxb3pzNWt1MA=="><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com/@shahhd123?si=3q50DD4z1n5m6uI_"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://github.com/shariq12345-ship-it"><i class="fa-brands fa-github"></i></a>
-        </div>
+    <!-- Mobile Hamburger Menu Button -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
 
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-item">Home</a></li>
+      <li><a href="#about" class="nav-item">About</a></li>
+      <li><a href="#services" class="nav-item">Services</a></li>
+      <li><a href="#projects" class="nav-item">Projects</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / Home Section -->
+<section id="home" class="section home-section">
+  <div class="home-content">
+    <div class="badge"><i class="fas fa-sparkles"></i> Available for Freelance</div>
+    <h1>Hi, I'm <span class="highlight-text">Shariq,</span></h1>
+    <h2 class="typing-container">I'm a <span id="typed-text"></span></h2>
+    <p class="skills-para">
+      A web developer builds and maintains websites and web applications. They work with technologies like
+      HTML, CSS, JavaScript, and backend languages to create responsive, functional, and user-friendly
+      digital experiences.
+    </p>
+
+    <div class="btn-social-box">
+      <a href="./content/bb3012a1-902a-4414-89b7-f4e0ecf0060e.jpg" class="btn btn-primary">Checkout CV <i class="fas fa-arrow-down-long"></i></a>
+      <div class="social-icons">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
-    <div class="copyright">
-        <p>copyright &copy; 2026; Designed by SHARIQ</p>
+  </div>
+
+  <!-- Hanging Card Wrapper -->
+<!-- Circular Animated Profile Wrapper -->
+  <div class="circle-avatar-container">
+    <div class="glow-backdrop"></div>
+    <div class="animated-light-ring"></div>
+    <div class="circle-img-frame">
+      <!-- Apni Image ka Path/URL yahan replace karen -->
+      <img src="./content/WhatsApp Image 2026-05-21 at 5.28.47 PM.jpeg" alt="Shariq Profile">
+    </div>
+  </div>
+</section>
+
+  <!-- Expanded About Section -->
+  <section id="about" class="section about-section">
+    <div class="about-img-wrapper">
+      <img src="./content/WhatsApp Image 2026-07-26 at 11.16.19 AM.jpeg"
+        alt="About Shariq">
     </div>
 
-    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <div class="about-content glass-card">
+      <span class="section-badge">Detailed Biography</span>
+      <h2>About Me</h2>
 
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Web Developer", "Web Designer", "Video Editor"],
-            typeSpeed: 100,
-            backSpeed: 100,
-            loop: true
-        })
-    </script>
-
-    <script>
+      <p class="about-description">
+        Hi, my name is <strong>Syed Shariq Raza Zaidi.</strong> I have passed Matriculation exam with science group.
+        Now, I am
+        student of intermediate. I am learning Web development skill from
+        “Aptech Leaning garden center”
+      </p>
 
 
-        var menu = document.getElementById("sidemenu");
 
-        function openmenu() {
-            sidemenu.style.top = "0"
-        }
-        function closemenu() {
-            sidemenu.style.top = "-400px"
-        }
+      <!-- Quick Metrics Counter -->
 
-    </script>
 
-    <script>
-        window.addEventListener("load", function () {
-            setTimeout(() => {
-                document.querySelector(".splash").style.display = "none";
-            }, 3000);
-        });
-    </script>
+      <!-- Interactive Tabs -->
+      <div class="tab-titles">
+        <button class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</button>
+        <button class="tab-links" onclick="opentab(event, 'experience')">Experience</button>
+        <button class="tab-links" onclick="opentab(event, 'education')">Education</button>
+      </div>
 
+      <div class="tab-contents active-tab" id="skills">
+        <ul class="styled-list">
+          <li><i class="fas fa-code"></i> <span>Frontend Development</span> — HTML5, CSS3, JavaScript (ES6+), jQuery,
+            Bootstrap</li>
+          <li><i class="fas fa-database"></i> <span>Version Control</span> — Git, GitHub, RESTful APIs, Command
+            Line</li>
+          <li><i class="fas fa-video"></i> <span>Video Editing</span> — Capcut, Motion Graphics,
+            Audio Cleaning</li>
+          <li><i class="fas fa-file-invoice"></i> <span>Office Automation</span> — Advanced Excel (VLOOKUP/Macros),
+            Word, PowerPoint Decks</li>
+        </ul>
+      </div>
+
+      <div class="tab-contents" id="experience">
+        <ul class="styled-list">
+          <li><i class="fa-solid fa-code"></i> <span>Web Development</span><br><small>1 Years of Experience from Aptech Learning</small></li>
+          <li><i class="fa-solid fa-palette"></i> <span>Graphic Design (bacic)</span><br><small>3 Months of Experience from Noor Collages</small></li>
+          <li><i class="fa-solid fa-file-word"></i> <span>Microsoft Office</span><br><small>2 Months of Experience from Noor Collages</small></li>
+        </ul>
+      </div>
+
+      <div class="tab-contents" id="education">
+        <ul class="styled-list">
+          <li><i class="fas fa-school"></i> <span>Matric in Computer Science</span> — Mama Baby Care (2022 -
+            2025) Rooted in Computer Science, wired for the future.<br></li>
+          <li><i class="fas fa-graduation-cap"></i> <span>Web Development</span> — Aptech Leaning (2025 -
+            2026) Crafting pixel-perfect websites with clean, efficient code.<br></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section services-section">
+    <div class="section-header">
+      <span class="section-badge">Capabilities</span>
+      <h2 class="section-title">My Services</h2>
+    </div>
+
+    <!-- Infinite Tech Marquee Loop -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>Excel &bull; Word &bull; PowerPoint &bull; HTML5 &bull; CSS3 &bull; JavaScript &bull; jQuery &bull;
+          Bootstrap &bull; Git &bull; GitHub &bull;&nbsp;</span>
+        <span>Excel &bull; Word &bull; PowerPoint &bull; HTML5 &bull; CSS3 &bull; JavaScript &bull; jQuery &bull;
+          Bootstrap &bull; Git &bull; GitHub &bull; Capcut &bull;&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="services-container">
+      <div class="card glass-card">
+        <div class="card-img-box">
+          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500&auto=format&fit=crop&q=80"
+            alt="Frontend">
+        </div>
+        <h3>Frontend Web Dev</h3>
+        <p>Responsive, mobile-first websites engineered with clean semantic code and slick animations.</p>
+      </div>
+
+      <div class="card glass-card">
+        <div class="card-img-box">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=80"
+            alt="Backend">
+        </div>
+        <h3>Backend Integration</h3>
+        <p>Secure database architectures, lightweight REST APIs, and backend server setups.</p>
+      </div>
+
+      <div class="card glass-card">
+        <div class="card-img-box">
+          <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=80"
+            alt="MS Office">
+        </div>
+        <h3>MS Office Suite</h3>
+        <p>Financial spreadsheets in Excel, professional corporate documents, and decks in PowerPoint.</p>
+      </div>
+
+      <div class="card glass-card">
+        <div class="card-img-box">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&auto=format&fit=crop&q=80"
+            alt="Video Editing">
+        </div>
+        <h3>Video Editing</h3>
+        <p>Cinematic YouTube edits, short-form Reels, dynamic captions, color grading, and audio polishing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header">
+      <span class="section-badge">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="projects-container">
+      <div class="project-card glass-card">
+        <div class="project-img-box">
+          <img src="./content/Screenshot 2026-07-26 105639.png"
+            alt="Project 1">
+        </div>
+        <div class="project-info">
+          <h3>Dental Care Website</h3>
+          <p>A modern and responsive dental care website featuring a clean UI and seamless user experience.</p>
+          <a href="https://shariq12345-ship-it.github.io/Dental-care/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card glass-card">
+        <div class="project-img-box">
+          <img src="./content/Screenshot 2026-07-26 105802.png"
+            alt="Project 2">
+        </div>
+        <div class="project-info">
+          <h3>Calculator</h3>
+          <p>An interactive calculator that performs basic calculations with a clean, responsive, and intuitive design.</p>
+          <a href="https://shariq12345-ship-it.github.io/Calculator/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <div class="project-card glass-card">
+        <div class="project-img-box">
+          <img src="./content/AI.jpg"
+            alt="Project 3">
+        </div>
+        <div class="project-info">
+          <h3>AI Legal Assistant</h3>
+          <p>An AI-powered legal assistant designed to provide legal guidance, answer queries, and simplify legal information.</p>
+          <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <span class="section-badge">Get in touch</span>
+      <h2 class="section-title">Contact Me</h2>
+    </div>
+
+    <div class="contact-container glass-card">
+      <div class="contact-left">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80"
+          alt="Contact Visual">
+
+        <div class="contact-methods">
+          <div class="method-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <small>Email</small>
+              <p>shariqraza401@gmail.com</p>
+            </div>
+          </div>
+          <div class="method-item">
+            <i class="fas fa-phone-volume"></i>
+            <div>
+              <small>Phone</small>
+              <p>+92 332 3189130</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+          <div class="input-group">
+            <input type="text" required placeholder="Your Name">
+          </div>
+          <div class="input-group">
+            <input type="email" required placeholder="Your Email">
+          </div>
+          <div class="input-group">
+            <textarea rows="5" required placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message <i
+              class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo">Portfolio<span>.</span></div>
+        <p>Creating exceptional web experiences with focus on performance and visual elegance.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Me</h3>
+        <p><i class="fas fa-envelope"></i> shariqraza401@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +92 332 3189130</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Follow Me</h3>
+        <div class="footer-socials">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shariq. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS File -->
+  <script src="script.js"></script>
 </body>
+
+<script>
+  // 1. Mobile Navigation Menu Toggle
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  const navItems = document.querySelectorAll(".nav-item");
+
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-active");
+      const icon = navToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-xmark");
+    });
+  }
+
+  // Close mobile menu when link is clicked
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (navLinks.classList.contains("nav-active")) {
+        navLinks.classList.remove("nav-active");
+        const icon = navToggle.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+      }
+    });
+  });
+
+  // 2. Typing Effect
+  const typingPhrases = ["Web Developer.", "UI/UX Designer.", "Video Editor."];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typedTextElement = document.getElementById("typed-text");
+
+  function handleTyping() {
+    const currentPhrase = typingPhrases[phraseIndex];
+
+    if (isDeleting) {
+      typedTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typedTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let delay = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      delay = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+      delay = 500;
+    }
+
+    setTimeout(handleTyping, delay);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    handleTyping();
+  });
+
+  // 3. Tab Switcher
+  function opentab(event, tabname) {
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    for (let link of tablinks) {
+      link.classList.remove("active-link");
+    }
+
+    for (let content of tabcontents) {
+      content.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
 
 </html>
