@@ -14,7 +14,8 @@
   --text-bright: #ffffff;
   --text-muted: #a1a1aa;
 }
-::selection{
+
+::selection {
   background: var(--deep-red-glow);
   color: floralwhite;
 }
@@ -34,6 +35,20 @@ body {
   color: var(--text-bright);
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+/* Floating Particles Background Container */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Baaqi content ke peeche rakhne ke liye */
+  pointer-events: none;
+  /* Mouse clicks pass-through hone ke liye */
+  background-color: var(--bg-dark);
 }
 
 /* Glassmorphism Card Utility */
@@ -77,7 +92,8 @@ body {
 /* Shariq's Specific Cursive Style & Dark Red Color */
 .joining-text .shariq-name {
   font-family: 'Dancing Script', cursive;
-  color: var(--primary-red); /* Dark Red Color */
+  color: var(--primary-red);
+  /* Dark Red Color */
   font-weight: 700;
 }
 
@@ -87,6 +103,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -224,7 +241,7 @@ body {
 
 .home-content {
   flex: 1;
-  margin-bottom:50px ;
+  margin-bottom: 50px;
 }
 
 .badge {
@@ -334,14 +351,12 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0%,
-    transparent 40%,
-    #ff6666 70%,
-    var(--primary-red) 90%,
-    #ffffff 100%
-  );
+  background: conic-gradient(from 0deg,
+      transparent 0%,
+      transparent 40%,
+      #ff6666 70%,
+      var(--primary-red) 90%,
+      #ffffff 100%);
   animation: rotateRing 5s linear infinite;
   z-index: 2;
   box-shadow: 0 0 20px var(--deep-red-glow);
@@ -350,7 +365,8 @@ body {
 /* Inner Frame containing Image */
 .circle-img-frame {
   position: relative;
-  width: calc(100% - 10px); /* Light ring border width control */
+  width: calc(100% - 10px);
+  /* Light ring border width control */
   height: calc(100% - 10px);
   border-radius: 50%;
   overflow: hidden;
@@ -371,6 +387,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -383,7 +400,7 @@ body {
     justify-content: center;
     text-align: center;
   }
-  
+
   .circle-avatar-container {
     width: 260px;
     height: 260px;
@@ -435,7 +452,7 @@ body {
 .about-content {
   flex: 1;
   padding: 35px;
-  background:transparent;
+  background: transparent;
 }
 
 .about-description {
@@ -479,9 +496,11 @@ body {
   border-bottom: 1px solid var(--glass-border);
   padding-bottom: 12px;
   overflow-x: auto;
-/* Scrollbar Hide Rules */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  /* Scrollbar Hide Rules */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Chrome, Safari, Opera me scrollbar hide karne ke liye */
@@ -511,7 +530,8 @@ body {
 .tab-links::after {
   content: '';
   position: absolute;
-  bottom: -13px; /* Tab container border ke bilkul upar adjust ke liye */
+  bottom: -13px;
+  /* Tab container border ke bilkul upar adjust ke liye */
   left: 0;
   width: 0%;
   height: 3px;
@@ -532,13 +552,15 @@ body {
 
 /* 🛑 Content Hiding/Showing Rules (Fixes Overlapping Glitch) */
 .tab-contents {
-  display: none !important; /* Non-active content ko completely hide karega */
+  display: none !important;
+  /* Non-active content ko completely hide karega */
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
 .tab-contents.active-tab {
-  display: block !important; /* Sirf active wala show hoga */
+  display: block !important;
+  /* Sirf active wala show hoga */
   opacity: 1;
 }
 

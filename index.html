@@ -17,18 +17,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap"
     rel="stylesheet">
-    <!-- Google Fonts mein Cursive Font add karen (Head Tag ke andar) -->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts mein Cursive Font add karen (Head Tag ke andar) -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <!-- Floating Particles Canvas Container -->
+  <div id="particles-js"></div>
 
-<!-- Intro Splash Overlay -->
-<div id="splash-screen">
-  <div class="splash-content">
-    <h1 class="joining-text">Welcome to <span class="shariq-name">Shariq's</span> Portfolio</h1>
+  <!-- Aapka baaqi poora HTML code yahan rahega -->
+
+  <!-- 1. Particles.js Library CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- 2. Main JavaScript File -->
+  <script src="script.js"></script>
+
+  <!-- Intro Splash Overlay -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <h1 class="joining-text">Welcome to <span class="shariq-name">Shariq's</span> Portfolio</h1>
+    </div>
   </div>
-</div>
 
   <!-- Glassmorphism Navbar -->
   <nav class="navbar">
@@ -49,44 +58,44 @@
   </nav>
 
   <!-- Hero / Home Section -->
-<section id="home" class="section home-section">
-  <div class="home-content">
-    <div class="badge"><i class="fas fa-sparkles"></i> Available for Freelance</div>
-    <h1>Hi, I'm <span class="highlight-text">Shariq,</span></h1>
-    <h2 class="typing-container">I'm a <span id="typed-text"></span></h2>
-    <p class="skills-para">
-      A web developer builds and maintains websites and web applications. They work with technologies like
-      HTML, CSS, JavaScript, and backend languages to create responsive, functional, and user-friendly
-      digital experiences.
-    </p>
+  <section id="home" class="section home-section">
+    <div class="home-content">
+      <div class="badge"><i class="fas fa-sparkles"></i> Available for Freelance</div>
+      <h1>Hi, I'm <span class="highlight-text">Shariq,</span></h1>
+      <h2 class="typing-container">I'm a <span id="typed-text"></span></h2>
+      <p class="skills-para">
+        A web developer builds and maintains websites and web applications. They work with technologies like
+        HTML, CSS, JavaScript, and backend languages to create responsive, functional, and user-friendly
+        digital experiences.
+      </p>
 
-    <div class="btn-social-box">
-      <a href="./content/62ed885a-83dc-4139-a8e2-980d7d0c573f.jpg" class="btn btn-primary">Checkout CV <i class="fas fa-arrow-down-long"></i></a>
-      <div class="social-icons">
-        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <div class="btn-social-box">
+        <a href="./content/62ed885a-83dc-4139-a8e2-980d7d0c573f.jpg" class="btn btn-primary">Checkout CV <i
+            class="fas fa-arrow-down-long"></i></a>
+        <div class="social-icons">
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Hanging Card Wrapper -->
-<!-- Circular Animated Profile Wrapper -->
-  <div class="circle-avatar-container">
-    <div class="glow-backdrop"></div>
-    <div class="animated-light-ring"></div>
-    <div class="circle-img-frame">
-      <!-- Apni Image ka Path/URL yahan replace karen -->
-      <img src="./content/WhatsApp Image 2026-05-21 at 5.28.47 PM.jpeg" alt="Shariq Profile">
+    <!-- Hanging Card Wrapper -->
+    <!-- Circular Animated Profile Wrapper -->
+    <div class="circle-avatar-container">
+      <div class="glow-backdrop"></div>
+      <div class="animated-light-ring"></div>
+      <div class="circle-img-frame">
+        <!-- Apni Image ka Path/URL yahan replace karen -->
+        <img src="./content/WhatsApp Image 2026-05-21 at 5.28.47 PM.jpeg" alt="Shariq Profile">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Expanded About Section -->
   <section id="about" class="section about-section">
     <div class="about-img-wrapper">
-      <img src="./content/WhatsApp Image 2026-07-26 at 11.16.19 AM.jpeg"
-        alt="About Shariq">
+      <img src="./content/WhatsApp Image 2026-07-26 at 11.16.19 AM.jpeg" alt="About Shariq">
     </div>
 
     <div class="about-content glass-card">
@@ -127,9 +136,12 @@
 
       <div class="tab-contents" id="experience">
         <ul class="styled-list">
-          <li><i class="fa-solid fa-code"></i> <span>Web Development</span><br><small>1 Years of Experience from Aptech Learning</small></li>
-          <li><i class="fa-solid fa-palette"></i> <span>Graphic Design (bacic)</span><br><small>3 Months of Experience from Noor Collages</small></li>
-          <li><i class="fa-solid fa-file-word"></i> <span>Microsoft Office</span><br><small>2 Months of Experience from Noor Collages</small></li>
+          <li><i class="fa-solid fa-code"></i> <span>Web Development</span><br><small>1 Years of Experience from Aptech
+              Learning</small></li>
+          <li><i class="fa-solid fa-palette"></i> <span>Graphic Design (basic)</span><br><small>3 Months of Experience
+              from Noor Collages</small></li>
+          <li><i class="fa-solid fa-file-word"></i> <span>Microsoft Office</span><br><small>2 Months of Experience from
+              Noor Collages</small></li>
         </ul>
       </div>
 
@@ -210,37 +222,39 @@
     <div class="projects-container">
       <div class="project-card glass-card">
         <div class="project-img-box">
-          <img src="./content/Screenshot 2026-07-26 105639.png"
-            alt="Project 1">
+          <img src="./content/Screenshot 2026-07-26 105639.png" alt="Project 1">
         </div>
         <div class="project-info">
           <h3>Dental Care Website</h3>
           <p>A modern and responsive dental care website featuring a clean UI and seamless user experience.</p>
-          <a href="https://shariq12345-ship-it.github.io/Dental-care/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+          <a href="https://shariq12345-ship-it.github.io/Dental-care/" class="btn btn-outline">View Project <i
+              class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="project-card glass-card">
         <div class="project-img-box">
-          <img src="./content/Screenshot 2026-07-26 105802.png"
-            alt="Project 2">
+          <img src="./content/Screenshot 2026-07-26 105802.png" alt="Project 2">
         </div>
         <div class="project-info">
           <h3>Calculator</h3>
-          <p>An interactive calculator that performs basic calculations with a clean, responsive, and intuitive design.</p>
-          <a href="https://shariq12345-ship-it.github.io/Calculator/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+          <p>An interactive calculator that performs basic calculations with a clean, responsive, and intuitive design.
+          </p>
+          <a href="https://shariq12345-ship-it.github.io/Calculator/" class="btn btn-outline">View Project <i
+              class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
       <div class="project-card glass-card">
         <div class="project-img-box">
-          <img src="./content/AI.jpg"
-            alt="Project 3">
+          <img src="./content/AI.jpg" alt="Project 3">
         </div>
         <div class="project-info">
           <h3>AI Legal Assistant</h3>
-          <p>An AI-powered legal assistant designed to provide legal guidance, answer queries, and simplify legal information.</p>
-          <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline">View Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+          <p>An AI-powered legal assistant designed to provide legal guidance, answer queries, and simplify legal
+            information.</p>
+          <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline">View Project <i
+              class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
@@ -340,6 +354,51 @@
 </body>
 
 <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 45, // Particles ki tadad
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": ["#ff2a2a", "#ffffff"] // Red aur White light particle
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 0.8,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": false // Lines off hain taake pure light floating particle look aaye
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.8, // Slow movement speed (Zyada slow ke liye 0.5 bhi kar sakte hain)
+        "direction": "top", // Light particles upward move karenge
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "retina_detect": true
+  });
+
   // 1. Mobile Navigation Menu Toggle
   const navToggle = document.getElementById("navToggle");
   const navLinks = document.getElementById("navLinks");
