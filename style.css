@@ -380,8 +380,9 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  object-position: 50% 10%; 
+  object-position: 50% 10%;
   transform: translateX(-15px);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Ring Rotation Animation */
@@ -646,11 +647,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease-in-out;
 }
 
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 8px;
+  transition: transform 0.4s ease-in-out;
 }
 
 .card p {
@@ -664,6 +667,15 @@ body {
   box-shadow: 0 10px 30px var(--deep-red-glow);
 }
 
+.card:hover .card-img-box img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.card:hover h3 {
+  color: var(--primary-red, #ff2a2a);
+  /* Ya jo bhi color aap rakhna chahein, e.g., #ff0000 */
+}
+
 /* Projects */
 .projects-container {
   display: grid;
@@ -673,17 +685,31 @@ body {
 
 .project-card {
   overflow: hidden;
+  transition: transform 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .project-img-box {
   width: 100%;
   height: 190px;
+  overflow: hidden;
 }
 
 .project-img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-img-box img {
+  transform: scale(1.1);
+}
+
+.project-card:hover {
+  border-color: var(--primary-red);
+  box-shadow: 0 10px 30px var(--deep-red-glow);
 }
 
 .project-info {
