@@ -80,10 +80,11 @@
       </p>
 
       <div class="btn-social-box">
-        <a href="./content/cdf5120c-820e-4d59-8096-0843a1d6421c.jpg" class="btn btn-primary">Checkout CV <i
+        <a href="./content/WhatsApp Image 2026-09-11 at 11.22.53 AM.jpeg" class="btn btn-primary">Checkout CV <i
             class="fa-solid fa-user-tie"></i></a>
         <div class="social-icons">
-          <a href="https://github.com/shariq12345-ship-it" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/shariq12345-ship-it" target="_blank" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/syed-shariq-raza-zaidi/" target="_blank" aria-label="LinkedIn"><i
               class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -184,42 +185,62 @@
       </div>
     </div>
 
-    <div class="services-container">
-      <div class="card glass-card">
-        <div class="card-img-box">
-          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500&auto=format&fit=crop&q=80"
-            alt="Frontend">
+    <!-- Rotating 3D Floating Carousel Container -->
+    <div class="services-carousel-container">
+      <div class="services-track" id="servicesTrack">
+
+        <!-- Card 1 -->
+        <div class="service-card glass-card" data-index="0">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500&auto=format&fit=crop&q=80"
+              alt="Frontend">
+          </div>
+          <div class="service-content">
+            <h3>Frontend Web Dev</h3>
+            <p>Responsive, mobile-first websites engineered with clean semantic code and slick animations.</p>
+          </div>
         </div>
-        <h3>Frontend Web Dev</h3>
-        <p>Responsive, mobile-first websites engineered with clean semantic code and slick animations.</p>
+
+        <!-- Card 2 -->
+        <div class="service-card glass-card" data-index="1">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=80"
+              alt="Backend">
+          </div>
+          <div class="service-content">
+            <h3>Backend Integration</h3>
+            <p>Secure database architectures, lightweight REST APIs, and backend server setups.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card glass-card" data-index="2">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=80"
+              alt="MS Office">
+          </div>
+          <div class="service-content">
+            <h3>MS Office Suite</h3>
+            <p>Financial spreadsheets in Excel, professional corporate documents, and decks in PowerPoint.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card glass-card" data-index="3">
+          <div class="card-img-box">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&auto=format&fit=crop&q=80"
+              alt="Video Editing">
+          </div>
+          <div class="service-content">
+            <h3>Video Editing</h3>
+            <p>Cinematic YouTube edits, short-form Reels, dynamic captions, color grading, and audio polishing.</p>
+          </div>
+        </div>
+
       </div>
 
-      <div class="card glass-card">
-        <div class="card-img-box">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=80"
-            alt="Backend">
-        </div>
-        <h3>Backend Integration</h3>
-        <p>Secure database architectures, lightweight REST APIs, and backend server setups.</p>
-      </div>
-
-      <div class="card glass-card">
-        <div class="card-img-box">
-          <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=80"
-            alt="MS Office">
-        </div>
-        <h3>MS Office Suite</h3>
-        <p>Financial spreadsheets in Excel, professional corporate documents, and decks in PowerPoint.</p>
-      </div>
-
-      <div class="card glass-card">
-        <div class="card-img-box">
-          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&auto=format&fit=crop&q=80"
-            alt="Video Editing">
-        </div>
-        <h3>Video Editing</h3>
-        <p>Cinematic YouTube edits, short-form Reels, dynamic captions, color grading, and audio polishing.</p>
-      </div>
+      <!-- Carousel Navigation Controls -->
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </section>
 
@@ -231,56 +252,149 @@
     </div>
 
     <div class="projects-container">
-      <div class="project-card glass-card">
-        <div class="project-img-box">
-          <img src="./content/Screenshot 2026-07-26 105639.png" alt="Project 1">
-        </div>
-        <div class="project-info">
-          <h3>Dental Care Website</h3>
-          <p>A modern and responsive dental care website featuring a clean UI and seamless user experience.</p>
-          <a href="https://shariq12345-ship-it.github.io/Dental-care/" class="btn btn-outline">View Project <i
-              class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
 
-      <div class="project-card glass-card">
+      <!-- Project Card 1 -->
+      <div class="project-card glass-card" style="--card-index: 0;">
         <div class="project-img-box">
-          <img src="./content/Screenshot 2026-07-26 105802.png" alt="Project 2">
-        </div>
-        <div class="project-info">
-          <h3>Calculator</h3>
-          <p>An interactive calculator that performs basic calculations with a clean, responsive, and intuitive design.
-          </p>
-          <a href="https://shariq12345-ship-it.github.io/Calculator/" class="btn btn-outline">View Project <i
-              class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      <div class="project-card glass-card">
-        <div class="project-img-box">
-          <img src="./content/AI.jpg" alt="Project 3">
-        </div>
-        <div class="project-info">
-          <h3>AI Legal Assistant</h3>
-          <p>An AI-powered legal assistant designed to provide legal guidance, answer queries, and simplify legal
-            information.</p>
-          <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline">View Project <i
-              class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      <div class="project-card glass-card">
-        <div class="project-img-box">
-          <img src="./content/ChatGPT Image Aug 25, 2026, 08_15_37 PM.png" alt="Project 4">
+          <img src="./content/ChatGPT Image Aug 25, 2026, 08_15_37 PM.png" alt="Al Qu'ran Ai">
         </div>
         <div class="project-info">
           <h3>Al Qu'ran Ai</h3>
           <p>A responsive Quran web app with audio recitations, Urdu translation, bookmarking, and Islamic AI assistant.
           </p>
-          <a href="https://al-quran-ai-islamic-assistant.vercel.app/" class="btn btn-outline">View Project <i
+          <a href="https://al-quran-ai-islamic-assistant.vercel.app/" class="btn btn-outline" target="_blank">View
+            Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card glass-card" style="--card-index: 1;">
+        <div class="project-img-box">
+          <img src="./content/Screenshot 2026-07-26 105639.png" alt="Dental Care Website">
+        </div>
+        <div class="project-info">
+          <h3>Dental Care Website</h3>
+          <p>A modern and responsive dental care website featuring a clean UI and seamless user experience.</p>
+          <a href="https://shariq12345-ship-it.github.io/Dental-care/" class="btn btn-outline" target="_blank">View
+            Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card glass-card" style="--card-index: 2;">
+        <div class="project-img-box">
+          <img src="./content/Screenshot 2026-07-26 105802.png" alt="Calculator">
+        </div>
+        <div class="project-info">
+          <h3>Calculator</h3>
+          <p>An interactive calculator that performs basic calculations with a clean, responsive, and intuitive design.
+          </p>
+          <a href="https://shariq12345-ship-it.github.io/Calculator/" class="btn btn-outline" target="_blank">View
+            Project <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-card glass-card" style="--card-index: 3;">
+        <div class="project-img-box">
+          <img src="./content/AI.jpg" alt="AI Legal Assistant">
+        </div>
+        <div class="project-info">
+          <h3>AI Legal Assistant</h3>
+          <p>An AI-powered legal assistant designed to provide legal guidance, answer queries, and simplify legal
+            information.</p>
+          <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline" target="_blank">View Project <i
               class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
+
+
+
+    </div>
+  </section>
+
+  <section class="slider-section">
+    <div class="section-header">
+      <span class="section-badge">EDITING SKILLS</span>
+    </div>
+
+    <div class="slider-outer-wrapper">
+      <!-- Left Arrow -->
+      <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Slider Container -->
+      <div class="slider-container" id="sliderContainer">
+        <div class="slider-track" id="sliderTrack">
+
+          <!-- Card 1 -->
+          <a href="./content/18091.mp4" target="_blank" class="video-card" data-index="0">
+            <div class="video-img-box">
+              <img src="./content/images.jpg" alt="Cinematic Commercial Reel">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="./content/18092.mp4" target="_blank" class="video-card" data-index="1">
+            <div class="video-img-box">
+              <img src="./content/zayn malik.jpg" alt="Tech Product Launch">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="./content/18094.mp4" target="_blank" class="video-card" data-index="2">
+            <div class="video-img-box">
+              <img src="./content/aamir khan.jpg" alt="Travel Vlog Edit">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="./content/18093.mp4" target="_blank" class="video-card" data-index="3">
+            <div class="video-img-box">
+              <img src="./content/superman.webp" alt="Travel Vlog Edit">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="./content/18095.mp4" target="_blank" class="video-card" data-index="4">
+            <div class="video-img-box">
+              <img src="./content/bilal.jpg" alt="Travel Vlog Edit">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 6 -->
+          <a href="./content/18097.mp4" target="_blank" class="video-card" data-index="5">
+            <div class="video-img-box">
+              <img src="./content/bmw.jpg" alt="Travel Vlog Edit">
+              <div class="play-overlay">
+                <i class="fas fa-play-circle"></i>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button class="nav-btn next-btn" id="nextBtn" aria-label="Next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
 
@@ -360,7 +474,8 @@
       <div class="footer-col">
         <h3>Follow Me</h3>
         <div class="footer-socials">
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -501,6 +616,160 @@
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
   }
+
+  window.addEventListener("load", function () {
+    const track = document.getElementById("sliderTrack");
+    const cards = Array.from(track.children);
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const container = document.getElementById("sliderContainer");
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+      cards.forEach((card, index) => {
+        card.classList.remove("active", "sibling");
+
+        if (index === currentIndex) {
+          card.classList.add("active");
+        } else if (index === currentIndex - 1 || index === currentIndex + 1) {
+          card.classList.add("sibling");
+        }
+      });
+
+      // Fixed card base width and gap check for rock-solid centering on all indices
+      const cardWidth = cards[0].offsetWidth;
+      const gap = window.innerWidth <= 768 ? 20 : 30;
+      const containerWidth = container.clientWidth;
+
+      // Calculate exact offset based on standard card step distance (cardWidth + gap)
+      const offset = (containerWidth / 2) - (cardWidth / 2) - (currentIndex * (cardWidth + gap));
+      track.style.transform = `translateX(${offset}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateSlider();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateSlider();
+    });
+
+    // Clicking side cards brings them to center
+    cards.forEach((card, index) => {
+      card.addEventListener("click", (e) => {
+        if (index !== currentIndex) {
+          e.preventDefault();
+          currentIndex = index;
+          updateSlider();
+        }
+      });
+    });
+
+    // Initial call & window resize support
+    updateSlider();
+    window.addEventListener("resize", updateSlider);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("servicesTrack");
+    const cards = Array.from(track.getElementsByClassName("service-card"));
+    const dotsContainer = document.getElementById("carouselDots");
+
+    let currentIndex = 0;
+    let isPaused = false;
+    let autoRotateTimer;
+    const totalCards = cards.length;
+
+    // Create Navigation Dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement("div");
+      dot.classList.add("carousel-dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        updateCarousel();
+        resetTimer();
+      });
+      dotsContainer.appendChild(dot);
+    });
+    const dots = Array.from(dotsContainer.getElementsByClassName("carousel-dot"));
+
+    function updateCarousel() {
+      cards.forEach((card, i) => {
+        // Calculate relative position from current centered card
+        let offset = (i - currentIndex + totalCards) % totalCards;
+        if (offset > totalCards / 2) {
+          offset -= totalCards;
+        }
+
+        // Apply 3D positioning coordinates based on offset
+        let translateX = offset * 240;
+        let translateZ = -Math.abs(offset) * 120;
+        let rotateY = offset * -15;
+        let scale = offset === 0 ? 1.15 : (1 - Math.abs(offset) * 0.15);
+        let opacity = Math.abs(offset) > 1 ? 0.3 : (offset === 0 ? 1 : 0.7);
+        let zIndex = 10 - Math.abs(offset);
+
+        if (isPaused && offset === 0) {
+          // Extra zoom and straight focus when hovered/clicked
+          scale = 1.25;
+          translateZ = 50;
+          rotateY = 0;
+          opacity = 1;
+          zIndex = 20;
+        }
+
+        card.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+        card.style.opacity = opacity;
+        card.style.zIndex = zIndex;
+      });
+
+      // Update active dot
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    function nextCard() {
+      if (!isPaused) {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateCarousel();
+      }
+    }
+
+    function resetTimer() {
+      clearInterval(autoRotateTimer);
+      autoRotateTimer = setInterval(nextCard, 2000); // Har 2 second par next card center mein aayega
+    }
+
+    // Hover & Click Interaction
+    cards.forEach((card, index) => {
+      card.addEventListener("mouseenter", () => {
+        isPaused = true;
+        currentIndex = index; // Clicked/Hovered card center par ajaye aur straight hojaye
+        updateCarousel();
+      });
+
+      card.addEventListener("mouseleave", () => {
+        isPaused = false;
+        resetTimer();
+      });
+
+      card.addEventListener("click", () => {
+        currentIndex = index;
+        isPaused = true;
+        updateCarousel();
+      });
+    });
+
+    // Initialize
+    updateCarousel();
+    resetTimer();
+  });
+
 </script>
 
 </html>
