@@ -1175,169 +1175,222 @@ body {
   margin-bottom: 25px;
 }
 
-/* Outer wrapper layout */
 .slider-outer-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 950px;
+  max-width: 1350px;
   margin: 0 auto;
-  gap: 10px;
+  gap: 15px;
 }
 
-/* Slider Viewport Container */
 .slider-container {
   width: 100%;
-  max-width: 720px;
+  max-width: 1250px;
   overflow: hidden;
   padding: 20px 0;
   margin: 0 auto;
 }
 
-/* Slider Track with GPU acceleration */
 .slider-track {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
-/* Video Card Styles (Butter-smooth transitions) */
+.bento-layout-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 0 0 100%;
+  justify-content: center;
+}
+
+/* Video Card Styles */
 .video-card {
-  flex: 0 0 320px;
-  height: 440px;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
   position: relative;
-  text-decoration: none;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #151515;
-  transform: scale(0.85) translateZ(0);
-  opacity: 0.35;
-  filter: blur(4px);
-  pointer-events: none;
-  backface-visibility: hidden;
-}
-
-.video-card.active {
-  transform: scale(1) translateZ(0);
-  opacity: 1;
-  filter: blur(0);
-  pointer-events: auto;
-  border-color: rgba(220, 20, 60, 0.6);
-  z-index: 5;
-}
-
-.video-card.sibling {
-  transform: scale(0.9) translateZ(0);
-  opacity: 0.65;
-  filter: blur(2px);
-  pointer-events: auto;
-  z-index: 2;
-}
-
-.video-img-box {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  cursor: pointer;
   background: #000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-img-box img {
+.video-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220, 20, 60, 0.9);
+  box-shadow: 0 12px 30px rgba(220, 20, 60, 0.3);
+}
+
+.video-card video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.video-card.active:hover .video-img-box img {
-  transform: scale(1.06);
-}
-
-/* Play Icon Overlay */
-.play-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
-
-.play-overlay i {
-  font-size: 64px;
-  color: #ff3333;
-  opacity: 0.95;
-  transition: transform 0.3s ease, color 0.3s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
-}
-
-.video-card.active:hover .play-overlay {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.video-card.active:hover .play-overlay i {
-  transform: scale(1.12);
-}
-
-/* Navigation Buttons */
-.nav-btn {
-  background: rgba(20, 20, 20, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
+/* Specific Aspect Ratios Styling */
+.ratio-9-16 {
+  width: 200px;
+  height: 355px; /* 9:16 Vertical */
   flex-shrink: 0;
 }
 
-.nav-btn:hover {
-  background: var(--primary-color, #ff3333);
-  border-color: var(--primary-color, #ff3333);
-  transform: scale(1.08);
+.ratio-16-9 {
+  width: 220px;
+  height: 124px; /* 16:9 Horizontal */
+  flex-shrink: 0;
 }
 
-/* Responsive Adjustments for Mobile Screens */
+.ratio-1-1 {
+  width: 170px;
+  height: 170px; /* 1:1 Square */
+  flex-shrink: 0;
+}
+
+/* Middle Columns Stack */
+.middle-stack-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+/* Fullscreen Video Modal */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content-box {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+}
+
+.modal-content-box video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(220, 20, 60, 0.3);
+  outline: none;
+  display: block;
+}
+
+.close-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: var(--primary-color, #ff3333);
+}
+
+/* Responsive Adjustments for Small Screens & Mobile */
+@media (max-width: 992px) {
+  .bento-layout-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .slider-outer-wrapper {
     max-width: 100%;
-    gap: 5px;
+    padding: 0 10px;
   }
-
+  
   .slider-container {
-    max-width: 240px;
+    overflow-x: visible; /* Scroll ki jagah proper stacking ke liye */
+    width: 100%;
   }
 
-  .video-card {
-    flex: 0 0 240px;
-    height: 350px;
+  /* 6 ki 6 videos ko mobile par aik proper grid mein dikhane ke liye */
+  .bento-layout-group {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns ka grid jismein saari 6 videos fit ho jayengi (3 rows ban hongi) */
+    gap: 12px;
+    justify-items: center;
+    width: 100%;
+    flex: none;
   }
 
-  .slider-track {
-    gap: 20px;
+  /* Middle columns ki nesting ko khatam kar ke grid items banana */
+  .middle-stack-col {
+    display: contents !important; 
   }
 
-  .nav-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 13px;
+  /* Saare cards ko mobile par ek clean aur barabar size dena taake koi video chup na ho */
+  .video-card,
+  .ratio-9-16, 
+  .ratio-16-9, 
+  .ratio-1-1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 150px !important; /* Mobile ke liye ek standard height */
+    flex-shrink: unset;
   }
+}
+/* ================================================= */
+/* DESKTOP & LARGE SCREEN VIDEO CARD SIZES (BADA KIYA) */
+/* ================================================= */
+.ratio-9-16 {
+  width: 260px;
+  height: 462px; /* Pehle se kaafi bada vertical card */
+  flex-shrink: 0;
+}
+
+.ratio-16-9 {
+  width: 300px;
+  height: 169px; /* Pehle se bada horizontal card */
+  flex-shrink: 0;
+}
+
+.ratio-1-1 {
+  width: 230px;
+  height: 230px; /* Pehle se bada square card */
+  flex-shrink: 0;
+}
+
+/* Middle Columns Stack Gap Adjustment */
+.middle-stack-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.bento-layout-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 100%;
+  justify-content: center;
 }

@@ -307,96 +307,80 @@
               class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
-
-
-
     </div>
   </section>
 
   <section class="slider-section">
     <div class="section-header">
-      <span class="section-badge">EDITING SKILLS</span>
+      <span class="section-badge">VIDEO EDITING</span>
     </div>
 
     <div class="slider-outer-wrapper">
-      <!-- Left Arrow -->
-      <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
       <!-- Slider Container -->
       <div class="slider-container" id="sliderContainer">
         <div class="slider-track" id="sliderTrack">
 
-          <!-- Card 1 -->
-          <a href="./content/18091.mp4" target="_blank" class="video-card" data-index="0">
-            <div class="video-img-box">
-              <img src="./content/images.jpg" alt="Cinematic Commercial Reel">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
-              </div>
-            </div>
-          </a>
+          <!-- Bento Group (All 6 Videos in mixed ratios) -->
+          <div class="bento-layout-group">
 
-          <!-- Card 2 -->
-          <a href="./content/18092.mp4" target="_blank" class="video-card" data-index="1">
-            <div class="video-img-box">
-              <img src="./content/zayn malik.jpg" alt="Tech Product Launch">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
-              </div>
+            <!-- 1. 9:16 Vertical Video (Left) -->
+            <div class="video-card ratio-9-16" data-video-src="./content/18779.mp4">
+              <video class="auto-play-video" muted loop playsinline preload="auto">
+                <source src="./content/18779.mp4" type="video/mp4">
+              </video>
             </div>
-          </a>
 
-          <!-- Card 3 -->
-          <a href="./content/18094.mp4" target="_blank" class="video-card" data-index="2">
-            <div class="video-img-box">
-              <img src="./content/aamir khan.jpg" alt="Travel Vlog Edit">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
+            <!-- Middle Stack: 4 Videos (Mix of 1:1 and 16:9) -->
+            <div class="middle-stack-col">
+              <!-- 2. 1:1 Square Video -->
+              <div class="video-card ratio-1-1" data-video-src="./content/18092.mp4">
+                <video class="auto-play-video" muted loop playsinline preload="auto">
+                  <source src="./content/18092.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!-- 3. 16:9 Horizontal Video -->
+              <div class="video-card ratio-16-9" data-video-src="./content/18097.mp4">
+                <video class="auto-play-video" muted loop playsinline preload="auto">
+                  <source src="./content/18097.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
-          </a>
 
-          <!-- Card 4 -->
-          <a href="./content/18093.mp4" target="_blank" class="video-card" data-index="3">
-            <div class="video-img-box">
-              <img src="./content/superman.webp" alt="Travel Vlog Edit">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
+            <div class="middle-stack-col">
+              <!-- 4. 16:9 Horizontal Video -->
+              <div class="video-card ratio-1-1" data-video-src="./content/18091.mp4">
+                <video class="auto-play-video" muted loop playsinline preload="auto">
+                  <source src="./content/18091.mp4" type="video/mp4">
+                </video>
+              </div>
+              <!-- 5. 1:1 Square Video -->
+              <div class="video-card ratio-1-1" data-video-src="./content/18095.mp4">
+                <video class="auto-play-video" muted loop playsinline preload="auto">
+                  <source src="./content/18095.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
-          </a>
 
-          <!-- Card 5 -->
-          <a href="./content/18095.mp4" target="_blank" class="video-card" data-index="4">
-            <div class="video-img-box">
-              <img src="./content/bilal.jpg" alt="Travel Vlog Edit">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
-              </div>
+            <!-- 6. 1:1 Square Video (Right) -->
+            <div class="video-card ratio-1-1" data-video-src="./content/18094.mp4">
+              <video class="auto-play-video" muted loop playsinline preload="auto">
+                <source src="./content/18094.mp4" type="video/mp4">
+              </video>
             </div>
-          </a>
-
-          <!-- Card 6 -->
-          <a href="./content/18097.mp4" target="_blank" class="video-card" data-index="5">
-            <div class="video-img-box">
-              <img src="./content/bmw.jpg" alt="Travel Vlog Edit">
-              <div class="play-overlay">
-                <i class="fas fa-play-circle"></i>
-              </div>
-            </div>
-          </a>
+          </div>
 
         </div>
       </div>
-
-      <!-- Right Arrow -->
-      <button class="nav-btn next-btn" id="nextBtn" aria-label="Next">
-        <i class="fas fa-chevron-right"></i>
-      </button>
     </div>
   </section>
+
+  <!-- Video Modal Popup -->
+  <div id="videoModal" class="video-modal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content-box">
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
 
   <!-- Contact Section -->
   <section id="contact" class="section contact-section">
@@ -617,157 +601,163 @@
     document.getElementById(tabname).classList.add("active-tab");
   }
 
-  window.addEventListener("load", function () {
-    const track = document.getElementById("sliderTrack");
-    const cards = Array.from(track.children);
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const container = document.getElementById("sliderContainer");
-
-    let currentIndex = 0;
-
-    function updateSlider() {
-      cards.forEach((card, index) => {
-        card.classList.remove("active", "sibling");
-
-        if (index === currentIndex) {
-          card.classList.add("active");
-        } else if (index === currentIndex - 1 || index === currentIndex + 1) {
-          card.classList.add("sibling");
-        }
-      });
-
-      // Fixed card base width and gap check for rock-solid centering on all indices
-      const cardWidth = cards[0].offsetWidth;
-      const gap = window.innerWidth <= 768 ? 20 : 30;
-      const containerWidth = container.clientWidth;
-
-      // Calculate exact offset based on standard card step distance (cardWidth + gap)
-      const offset = (containerWidth / 2) - (cardWidth / 2) - (currentIndex * (cardWidth + gap));
-      track.style.transform = `translateX(${offset}px)`;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      updateSlider();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      updateSlider();
-    });
-
-    // Clicking side cards brings them to center
-    cards.forEach((card, index) => {
-      card.addEventListener("click", (e) => {
-        if (index !== currentIndex) {
-          e.preventDefault();
-          currentIndex = index;
-          updateSlider();
-        }
-      });
-    });
-
-    // Initial call & window resize support
-    updateSlider();
-    window.addEventListener("resize", updateSlider);
-  });
-
   document.addEventListener("DOMContentLoaded", () => {
-    const track = document.getElementById("servicesTrack");
-    const cards = Array.from(track.getElementsByClassName("service-card"));
-    const dotsContainer = document.getElementById("carouselDots");
+    // ==========================================
+    // 1. VIDEO MODAL & AUTO-PLAY LOGIC
+    // ==========================================
+    const videoCards = document.querySelectorAll(".video-card");
+    const videoModal = document.getElementById("videoModal");
+    const modalVideo = document.getElementById("modalVideo");
+    const closeModal = document.querySelector(".close-modal");
 
-    let currentIndex = 0;
-    let isPaused = false;
-    let autoRotateTimer;
-    const totalCards = cards.length;
-
-    // Create Navigation Dots
-    cards.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.classList.add("carousel-dot");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => {
-        currentIndex = i;
-        updateCarousel();
-        resetTimer();
+    // Background videos auto-play/pause based on visibility
+    const videos = document.querySelectorAll(".auto-play-video");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const vid = entry.target;
+        if (entry.isIntersecting) {
+          vid.play().catch(e => console.log("Autoplay blocked:", e));
+        } else {
+          vid.pause();
+        }
       });
-      dotsContainer.appendChild(dot);
+    }, { threshold: 0.3 });
+
+    videos.forEach(v => observer.observe(v));
+
+    // Open video in modal on click (Using direct src assignment for reliability)
+    videoCards.forEach(card => {
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        const videoSrc = card.getAttribute("data-video-src");
+
+        if (videoSrc && modalVideo) {
+          modalVideo.src = videoSrc;
+          modalVideo.load();
+          if (videoModal) videoModal.classList.add("active");
+          modalVideo.play().catch(err => console.log("Modal play error:", err));
+        }
+      });
     });
-    const dots = Array.from(dotsContainer.getElementsByClassName("carousel-dot"));
 
-    function updateCarousel() {
-      cards.forEach((card, i) => {
-        // Calculate relative position from current centered card
-        let offset = (i - currentIndex + totalCards) % totalCards;
-        if (offset > totalCards / 2) {
-          offset -= totalCards;
-        }
-
-        // Apply 3D positioning coordinates based on offset
-        let translateX = offset * 240;
-        let translateZ = -Math.abs(offset) * 120;
-        let rotateY = offset * -15;
-        let scale = offset === 0 ? 1.15 : (1 - Math.abs(offset) * 0.15);
-        let opacity = Math.abs(offset) > 1 ? 0.3 : (offset === 0 ? 1 : 0.7);
-        let zIndex = 10 - Math.abs(offset);
-
-        if (isPaused && offset === 0) {
-          // Extra zoom and straight focus when hovered/clicked
-          scale = 1.25;
-          translateZ = 50;
-          rotateY = 0;
-          opacity = 1;
-          zIndex = 20;
-        }
-
-        card.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
-        card.style.opacity = opacity;
-        card.style.zIndex = zIndex;
-      });
-
-      // Update active dot
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentIndex);
-      });
-    }
-
-    function nextCard() {
-      if (!isPaused) {
-        currentIndex = (currentIndex + 1) % totalCards;
-        updateCarousel();
+    // Close modal function
+    function closeModalFunc() {
+      if (videoModal && modalVideo) {
+        videoModal.classList.remove("active");
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+        modalVideo.src = ""; // Clear source on close
       }
     }
 
-    function resetTimer() {
-      clearInterval(autoRotateTimer);
-      autoRotateTimer = setInterval(nextCard, 2000); // Har 2 second par next card center mein aayega
+    if (closeModal) closeModal.addEventListener("click", closeModalFunc);
+
+    if (videoModal) {
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) closeModalFunc();
+      });
     }
 
-    // Hover & Click Interaction
-    cards.forEach((card, index) => {
-      card.addEventListener("mouseenter", () => {
-        isPaused = true;
-        currentIndex = index; // Clicked/Hovered card center par ajaye aur straight hojaye
-        updateCarousel();
-      });
-
-      card.addEventListener("mouseleave", () => {
-        isPaused = false;
-        resetTimer();
-      });
-
-      card.addEventListener("click", () => {
-        currentIndex = index;
-        isPaused = true;
-        updateCarousel();
-      });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModalFunc();
     });
 
-    // Initialize
-    updateCarousel();
-    resetTimer();
+
+    // ==========================================
+    // 2. SERVICES 3D CAROUSEL LOGIC
+    // ==========================================
+    const track = document.getElementById("servicesTrack");
+    if (track) {
+      const cards = Array.from(track.getElementsByClassName("service-card"));
+      const dotsContainer = document.getElementById("carouselDots");
+
+      let currentIndex = 0;
+      let isPaused = false;
+      let autoRotateTimer;
+      const totalCards = cards.length;
+
+      // Create Navigation Dots if dotsContainer exists
+      if (dotsContainer) {
+        cards.forEach((_, i) => {
+          const dot = document.createElement("div");
+          dot.classList.add("carousel-dot");
+          if (i === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel();
+            resetTimer();
+          });
+          dotsContainer.appendChild(dot);
+        });
+      }
+      const dots = dotsContainer ? Array.from(dotsContainer.getElementsByClassName("carousel-dot")) : [];
+
+      function updateCarousel() {
+        cards.forEach((card, i) => {
+          let offset = (i - currentIndex + totalCards) % totalCards;
+          if (offset > totalCards / 2) {
+            offset -= totalCards;
+          }
+
+          let translateX = offset * 240;
+          let translateZ = -Math.abs(offset) * 120;
+          let rotateY = offset * -15;
+          let scale = offset === 0 ? 1.15 : (1 - Math.abs(offset) * 0.15);
+          let opacity = Math.abs(offset) > 1 ? 0.3 : (offset === 0 ? 1 : 0.7);
+          let zIndex = 10 - Math.abs(offset);
+
+          if (isPaused && offset === 0) {
+            scale = 1.25;
+            translateZ = 50;
+            rotateY = 0;
+            opacity = 1;
+            zIndex = 20;
+          }
+
+          card.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) rotateY(${rotateY}deg) scale(${scale})`;
+          card.style.opacity = opacity;
+          card.style.zIndex = zIndex;
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function nextCard() {
+        if (!isPaused) {
+          currentIndex = (currentIndex + 1) % totalCards;
+          updateCarousel();
+        }
+      }
+
+      function resetTimer() {
+        clearInterval(autoRotateTimer);
+        autoRotateTimer = setInterval(nextCard, 2000);
+      }
+
+      cards.forEach((card, index) => {
+        card.addEventListener("mouseenter", () => {
+          isPaused = true;
+          currentIndex = index;
+          updateCarousel();
+        });
+
+        card.addEventListener("mouseleave", () => {
+          isPaused = false;
+          resetTimer();
+        });
+
+        card.addEventListener("click", () => {
+          currentIndex = index;
+          isPaused = true;
+          updateCarousel();
+        });
+      });
+
+      updateCarousel();
+      resetTimer();
+    }
   });
 
 </script>
