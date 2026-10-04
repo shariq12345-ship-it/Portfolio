@@ -12,8 +12,7 @@
   <!-- WhatsApp/LinkedIn Direct Link Preview (Private Sharing) -->
   <meta property="og:title" content="Shariq Raza | Portfolio">
   <meta property="og:description" content="Web Developer & Video Editor">
-  <meta property="og:image"
-    content="https://portfolio-syed-shariq.vercel.app/content/content/image.png">
+  <meta property="og:image" content="https://portfolio-syed-shariq.vercel.app/content/content/image.png">
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -99,7 +98,7 @@
       <div class="animated-light-ring"></div>
       <div class="circle-img-frame">
         <!-- Apni Image ka Path/URL yahan replace karen -->
-        <img src="./content/ChatGPT Image Sep 23, 2026, 02_52_57 PM.png" alt="Shariq Profile">
+        <img src="./content/WhatsApp Image 2026-09-12 at 10.45.49 AM (1).jpeg" alt="Shariq Profile">
       </div>
     </div>
   </section>
@@ -107,7 +106,7 @@
   <!-- Expanded About Section -->
   <section id="about" class="section about-section">
     <div class="about-img-wrapper">
-      <img src="./content/ChatGPT Image Sep 23, 2026, 02_52_57 PM.png" alt="About Shariq">
+      <img src="./content/WhatsApp Image 2026-09-12 at 10.45.49 AM (1).jpeg" alt="About Shariq">
     </div>
 
     <div class="about-content glass-card">
@@ -208,7 +207,7 @@
         <span>Excel &bull; Word &bull; PowerPoint &bull; HTML5 &bull; CSS3 &bull; JavaScript &bull; jQuery &bull;
           Bootstrap &bull; Php &bull; Mysql &bull; Lavavel &bull; Node.js &bull; Git &bull; GitHub &bull; Vercel &bull;
           Capcut &bull; Alight Motion &bull; PicsArt &bull;&nbsp;</span>
-                  <span>Excel &bull; Word &bull; PowerPoint &bull; HTML5 &bull; CSS3 &bull; JavaScript &bull; jQuery &bull;
+        <span>Excel &bull; Word &bull; PowerPoint &bull; HTML5 &bull; CSS3 &bull; JavaScript &bull; jQuery &bull;
           Bootstrap &bull; Php &bull; Mysql &bull; Lavavel &bull; Node.js &bull; Git &bull; GitHub &bull; Vercel &bull;
           Capcut &bull; Alight Motion &bull; PicsArt &bull;&nbsp;</span>
       </div>
@@ -285,20 +284,6 @@
       <!-- Project Card 1 -->
       <div class="project-card glass-card" style="--card-index: 0;">
         <div class="project-img-box">
-          <img src="./content/ChatGPT Image Aug 25, 2026, 08_15_37 PM.png" alt="Al Qu'ran Ai">
-        </div>
-        <div class="project-info">
-          <h3>Al Qu'ran Ai</h3>
-          <p>A responsive Quran web app with audio recitations, Urdu translation, bookmarking, and Islamic AI assistant.
-          </p>
-          <a href="https://al-quran-ai-islamic-assistant.vercel.app/" class="btn btn-outline" target="_blank">View
-            Project <i class="fas fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-
-      <!-- Project Card 2 -->
-      <div class="project-card glass-card" style="--card-index: 1;">
-        <div class="project-img-box">
           <img src="./content/Screenshot 2026-07-26 105639.png" alt="Dental Care Website">
         </div>
         <div class="project-info">
@@ -309,8 +294,8 @@
         </div>
       </div>
 
-      <!-- Project Card 3 -->
-      <div class="project-card glass-card" style="--card-index: 2;">
+      <!-- Project Card 2 -->
+      <div class="project-card glass-card" style="--card-index: 1;">
         <div class="project-img-box">
           <img src="./content/Screenshot 2026-07-26 105802.png" alt="Calculator">
         </div>
@@ -323,8 +308,8 @@
         </div>
       </div>
 
-      <!-- Project Card 4 -->
-      <div class="project-card glass-card" style="--card-index: 3;">
+      <!-- Project Card 3 -->
+      <div class="project-card glass-card" style="--card-index: 2;">
         <div class="project-img-box">
           <img src="./content/AI.jpg" alt="AI Legal Assistant">
         </div>
@@ -334,6 +319,20 @@
             information.</p>
           <a href="https://ai-legal-asisstant.vercel.app/" class="btn btn-outline" target="_blank">View Project <i
               class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-card glass-card" style="--card-index: 3;">
+        <div class="project-img-box">
+          <img src="./content/ChatGPT Image Aug 25, 2026, 08_15_37 PM.png" alt="Al Qu'ran Ai">
+        </div>
+        <div class="project-info">
+          <h3>Al Qu'ran Ai</h3>
+          <p>A responsive Quran web app with audio recitations, Urdu translation, bookmarking, and Islamic AI assistant.
+          </p>
+          <a href="https://al-quran-ai-islamic-assistant.vercel.app/" class="btn btn-outline" target="_blank">View
+            Project <i class="fas fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </div>
@@ -371,18 +370,29 @@
       </div>
 
       <div class="contact-right">
-        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+        <form id="form" class="contact-form">
+          <!-- Web3Forms Access Key (Yahan apni asli key daal dein) -->
+          <input type="hidden" name="access_key" value="483a01dd-7977-4300-83df-2b08cd5c8d2d">
+
           <div class="input-group">
-            <input type="text" required placeholder="Your Name">
+            <input type="text" name="name" required placeholder="Your Name">
           </div>
           <div class="input-group">
-            <input type="email" required placeholder="Your Email">
+            <input type="email" name="email" required placeholder="Your Email">
           </div>
           <div class="input-group">
-            <textarea rows="5" required placeholder="Your Message"></textarea>
+            <textarea name="message" rows="5" required placeholder="Your Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message <i
-              class="fas fa-paper-plane"></i></button>
+
+          <!-- Spam protection ke liye hidden checkbox -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-full">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <!-- Message bhechte waqt status yahan dikhega -->
+          <div id="result" style="margin-top: 15px; font-weight: 500;"></div>
         </form>
       </div>
     </div>
@@ -697,6 +707,52 @@
   // 2. Agar page load hone par experience section pehle se open hai:
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(animateProgressBars, 400);
+  });
+
+  // ----------------------forms submit------------------------
+
+  const form = document.getElementById('form');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Sending...";
+    result.style.color = "#007bff"; // Blue color while sending
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = "Success! Message sent successfully.";
+          result.style.color = "green";
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+          result.style.color = "red";
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        result.innerHTML = "Something went wrong! Please try again.";
+        result.style.color = "red";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.innerHTML = "";
+        }, 5000); // 5 seconds baad message automatically gayab ho jayega
+      });
   });
 
 </script>
